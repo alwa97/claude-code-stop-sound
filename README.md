@@ -19,6 +19,17 @@ Get audio notifications when Claude Code finishes running tasks on macOS and Win
           }
         ]
       }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Glass.aiff"
+          }
+        ]
+      }
     ]
   }
 }
@@ -29,6 +40,17 @@ Get audio notifications when Claude Code finishes running tasks on macOS and Win
 {
   "hooks": {
     "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -c \"(New-Object Media.SoundPlayer 'C:\\Windows\\Media\\Windows Notify System Generic.wav').PlaySync()\""
+          }
+        ]
+      }
+    ],
+    "Notification": [
       {
         "matcher": "",
         "hooks": [
